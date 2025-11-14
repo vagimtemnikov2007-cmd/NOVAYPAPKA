@@ -1,0 +1,325 @@
+.bg{
+    
+    position: fixed;
+    z-index: -10;
+    width: 100%;
+    height: 1000px;
+    opacity: var(--pah);
+    background-image: url(https://i.pinimg.com/originals/2c/bb/a7/2cbba736bdf07130106a7a916fe68b8b.gif);
+}
+.header {
+  background: var(--bg);
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  justify-content: space-around;
+  gap: 00px;
+  align-items: center;
+  transition: 0.6s;
+  h1{
+    color: var(--col);
+  }
+  a{
+    text-decoration: none;
+    border: 5px solid red;
+    border-radius: 15px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background-color: var(--bg);
+    color: red  ;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+}
+.header a:hover{
+    transition: 0.3s;
+        opacity: 1;
+}
+.vh {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.them {
+  display: flex;
+  gap: 10px;
+  margin-right: 40px;
+  z-index: 999;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid transparent;
+  transition: 0.6s;
+}
+body{
+    margin: 0;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.btn.light {
+  background-image: url("https://cdn1.iconfinder.com/data/icons/simple-glyph-vol2/100/.svg-17-512.png");
+}
+.btn.night {
+  background-image: url("https://cdn2.iconfinder.com/data/icons/funtime-solid-environment/60/002_014_moon_crescent_sleep_night_weather_nature-1024.png");
+}
+
+html:has(#light:checked) .btn.light {
+  border-color: rgb(0, 0, 0);
+}
+html:has(#night:checked) .btn.night {
+  border-color: rgb(255, 255, 255);
+}
+
+:root {
+  --bg: azure;
+  --gradirnt: 1;
+  --col: blue;
+  --eco:100%;
+  --pah: 0.3;
+  --inve:0.1;
+}
+
+html:has(#light:checked) {
+  --bg: azure;
+  --gradirnt: 2;
+  --col: blue;
+  --eco:100%;
+  --pah: 0.3;
+  --inve:0.1;
+}
+
+html:has(#night:checked) {
+  --bg: rgb(30, 30, 55);
+  --gradirnt: 0.1;
+  --col: white;
+  --eco:30%;
+  --pah: 0.6;
+  --inve:0.85;
+}
+
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.sixtyfour {
+  font-family: "Sixtyfour", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+section{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    
+    flex-direction: column;
+}
+.bottom{
+    width: 80%;
+    height: 100px;
+    background-size: 800px;
+    background-image: url(../../photos/ChatGPT\ Image\ 13\ нояб.\ 2025\ г.\,\ 16_56_42.png);
+    flex: 1;
+}
+.top{
+    position: relative;
+    top: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: end;
+    display: flex;
+    flex: 7;
+    color: white;
+}
+.DK{
+    position: absolute;
+    top: 100px;
+    z-index: 1;
+    font-size: 120px;
+    transition: 1s;
+}
+.DK:hover{
+    font-size: 140px;
+    transition: 1s;
+}
+
+.DK2{
+    position: absolute;
+    text-align: center;
+    top: 200px;
+    z-index: 1;
+    font-size: 30px;
+    transition: 1s;
+}
+.DK2:hover{
+    font-size: 50px;
+    transition: 1s;
+}
+
+.bottom_left{
+    width: 80%;
+    height: 100px;
+    background-size: 600px;
+    background-image: url(../../photos/ChatGPT\ Image\ 13\ нояб.\ 2025\ г.\,\ 16_56_42.png);
+    flex: 1;
+    transform: rotate(3deg);
+}
+.top_left{
+    position: relative;
+    margin-left: 50px;
+    width: 80%;
+    justify-content: start;
+    align-items: end;
+    display: flex;
+    transform: rotate(3deg);
+    flex: 7;
+    color: white;
+}
+
+.info_main{
+    align-items: center;
+    justify-content: end;
+    height: 800px;
+}
+.info_left{
+    display: flex;
+    justify-content: start ;
+}
+
+.info_right{
+    display: flex;
+    align-items: end;
+    justify-content: end ;
+}
+
+.bottom_right{
+    width: 80%;
+    height: 100px;
+    background-size: 600px;
+    background-image: url(../../photos/ChatGPT\ Image\ 13\ нояб.\ 2025\ г.\,\ 16_56_42.png);
+    flex: 1;
+    transform: rotate(-3deg);
+}
+.top_right{
+    position: relative;
+    margin-left: 50px;
+    width: 80%;
+    justify-content: end;
+    align-items: end;
+    display: flex;
+    transform: rotate(-3deg);
+    flex: 7;
+    color: white;
+}
+
+.mario{
+    width: 100px;
+}
+
+.stairs{
+    position: absolute;
+    background-image: url(../../photos/ChatGPT\ Image\ 14\ нояб.\ 2025\ г.\,\ 15_25_07.png);
+    background-size: 100px;
+    z-index: -1;
+}
+.stair_1{
+    top: 700px;
+    left: 600px;
+    width: 100px;
+    height: 650px;
+}
+.stair_2{
+    top: 1400px;
+    left: 950px;
+    width: 100px;
+    height: 600px;
+}
+.stair_3{
+    top: 1950px;
+    left: 600px;
+    width: 100px;
+    height: 640px;
+}
+.stair_4{
+    top: 2600px;
+    left: 950px;
+    width: 100px;
+    height: 600px;
+}
+.stair_5{
+    top: 3200px;
+    left: 800px;
+    width: 100px;
+    height: 700px;
+}
+
+.dicor{
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+}
+
+.barrels{
+    position: absolute;
+    background-image: url(../../photos/ChatGPT\ Image\ 14\ нояб.\ 2025\ г.\,\ 15_25_47.png);
+    background-size: 130px;
+    z-index: -1;
+    width: 130px;
+    height: 200px;
+}
+
+.barrel_1{
+    top: 1300px;
+    left: 1600px;
+    transform: rotate(120deg);
+    
+}
+.barrel_2{
+    top: 3100px;
+    left: 100px;
+    transform: rotate(220deg);
+}
+.fires{
+    position: absolute;
+    background-image: url(../../photos/ChatGPT\ Image\ 14\ нояб.\ 2025\ г.\,\ 15_26_20.png);
+    background-size: 80px;
+    z-index: -1;
+    width: 80px;
+    height: 140px;
+}
+
+.fire_1{
+    top: 1800px;
+    left: 200px;
+    transform: rotate(20deg);
+    
+}
+.fire_2{
+    top: 2600px;
+    left: 1700px;
+    transform: rotate(-20deg);
+}
+

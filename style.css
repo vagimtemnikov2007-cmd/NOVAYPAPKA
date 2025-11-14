@@ -1,0 +1,216 @@
+.bg {
+  width: 100%;
+  height: 1000px;
+  background-image: var(--main_bg);
+  background-size: cover;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  position: absolute;
+  transition: transform 0.6s;
+  
+}
+
+.vh {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.them {
+  display: flex;
+  gap: 10px;
+  margin-right: 40px;
+  z-index: 999;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid transparent;
+  transition: 0.6s;
+}
+
+.btn.light {
+  background-image: url("https://cdn1.iconfinder.com/data/icons/simple-glyph-vol2/100/.svg-17-512.png");
+}
+.btn.night {
+  background-image: url("https://cdn2.iconfinder.com/data/icons/funtime-solid-environment/60/002_014_moon_crescent_sleep_night_weather_nature-1024.png");
+}
+
+html:has(#light:checked) .btn.light {
+  border-color: rgb(0, 0, 0);
+}
+html:has(#night:checked) .btn.night {
+  border-color: rgb(255, 255, 255);
+}
+
+:root {
+  --bg: azure;
+  --main_bg: url(photos/ChatGPT\ Image\ 10\ нояб.\ 2025\ г.\,\ 15_40_23.png);
+  --gradirnt: 1;
+  --col: blue;
+  --eco:100%;
+  --pah: 0.3;
+}
+
+html:has(#light:checked) {
+  --bg: azure;
+  --main_bg: url(photos/ChatGPT\ Image\ 10\ нояб.\ 2025\ г.\,\ 15_40_23.png);
+  --gradirnt: 2;
+  --col: blue;
+  --eco:100%;
+  --pah: 0.3;
+}
+
+html:has(#night:checked) {
+  --bg: rgb(30, 30, 55);
+  --main_bg: url(photos/ChatGPT\ Image\ 10\ нояб.\ 2025\ г.\,\ 15_40_24.png);
+  --gradirnt: 0.1;
+  --col: white;
+  --eco:30%;
+  --pah: 0.6;
+}
+
+.header {
+  background: var(--bg);
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  justify-content: space-around;
+  gap: 500px;
+  align-items: center;
+  transition: 0.6s;
+  h1{
+    color: var(--col);
+  }
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 950px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  z-index: 0;
+}
+
+.tv {
+  width: 800px;
+  height: auto;
+  padding-right: 100px;
+  position: absolute;
+  display: flex;
+  justify-content: start;
+
+  img {
+    width: 100%;
+    z-index: 10;
+    pointer-events: none;
+    filter: brightness(var(--eco));
+    transition: 0.3s  ;
+  }
+
+}
+.info {
+  position: absolute;
+  width: 600px;
+  left: 20px;
+  top: 10px;
+  height: 500px;
+  background-color: rgb(0, 38, 255);
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info a{
+  padding: 30px;
+  padding-left: 120px;
+  padding-right: 120px;
+  background-color: rgb(30, 255, 0);
+  border: 10px solid black;
+  border-radius: 20px;
+  color: #ffffff;
+  text-decoration:none;
+  font-size:x-large;
+  transition: 0.3s;
+}
+nav{
+  margin-top: 60px;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+a:hover{
+  padding: 50px;
+  padding-left: 140px;
+  padding-right: 140px;
+  transition: 0.3s;
+  transform: rotate(20deg);
+  font-size:xx-large;
+  opacity: 1;
+  z-index: 100000;
+}
+
+.rev:hover{
+  transition: 0.3s;
+  transform: rotate(-20deg);
+}
+
+.info a:first-child{
+  background-image: url(https://i.ytimg.com/vi/UJBhupsN6OM/maxresdefault.jpg);
+  background-size: 350px ;
+  padding-left: 95px;
+  padding-right: 95px;
+}
+
+.info a:nth-child(2){
+  background-image: url(https://wallpapers.com/images/hd/pac-man-2178-x-1225-background-nbwu8q6qmuslpblx.jpg);
+  background-size: cover ;
+  padding-left: 85px;
+  padding-right: 85px;
+}
+.info a:last-child{
+  background-image: url(https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_668a297e044d2e271f1a9a1a_668a2986044d2e271f1a9c60/scale_1200);
+  background-size: cover ;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.sixtyfour {
+  font-family: "Sixtyfour", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0;
+}
+.pomehi{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://i.pinimg.com/originals/2c/bb/a7/2cbba736bdf07130106a7a916fe68b8b.gif);
+  opacity: var(--pah);
+  pointer-events: none;
+}
+

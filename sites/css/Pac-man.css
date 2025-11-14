@@ -1,0 +1,144 @@
+.header {
+  background: var(--bg);
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  justify-content: space-around;
+  gap: 00px;
+  align-items: center;
+  transition: 0.6s;
+  h1{
+    color: var(--col);
+  }
+  a{
+    text-decoration: none;
+    border: 5px solid red;
+    border-radius: 15px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background-color: var(--bg);
+    color: red;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+}
+.header a:hover{
+    transition: 0.3s;
+        opacity: 1;
+}
+.vh {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.them {
+  display: flex;
+  gap: 10px;
+  margin-right: 40px;
+  z-index: 999;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid transparent;
+  transition: 0.6s;
+}
+body{
+    height: 500vh;
+    margin: 0;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.btn.light {
+  background-image: url("https://cdn1.iconfinder.com/data/icons/simple-glyph-vol2/100/.svg-17-512.png");
+}
+.btn.night {
+  background-image: url("https://cdn2.iconfinder.com/data/icons/funtime-solid-environment/60/002_014_moon_crescent_sleep_night_weather_nature-1024.png");
+}
+
+html:has(#light:checked) .btn.light {
+  border-color: rgb(0, 0, 0);
+}
+html:has(#night:checked) .btn.night {
+  border-color: rgb(255, 255, 255);
+}
+
+:root {
+  --bg: azure;
+  --gradirnt: 1;
+  --col: blue;
+  --eco:100%;
+  --pah: 0.3;
+  --inve:0.1;
+}
+
+html:has(#light:checked) {
+  --bg: azure;
+  --gradirnt: 2;
+  --col: blue;
+  --eco:100%;
+  --pah: 0.3;
+  --inve:0.1;
+}
+
+html:has(#night:checked) {
+  --bg: rgb(30, 30, 55);
+  --gradirnt: 0.1;
+  --col: white;
+  --eco:30%;
+  --pah: 0.6;
+  --inve:0.85;
+}
+
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.sixtyfour {
+  font-family: "Sixtyfour", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0;
+}
+
+
+@scroll-timeline scrol{
+    source:auto;
+    orientation:block;
+}
+@keyframes fly{
+    0%{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0) translateX(100px);
+        opacity: 1;
+    }
+}
+.block{
+    width: 250px;
+    height: 500px;
+    border: 5px solid blue;
+    animation: fly 1s linear both;
+    animation-timeline: scrol;
+    animation-range: entry 0% entry 100%;
+}
