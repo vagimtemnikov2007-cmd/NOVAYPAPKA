@@ -109,7 +109,7 @@ html:has(#night:checked) {
   padding-right: 100px;
   position: absolute;
   display: flex;
-  justify-content: start;
+  justify-content: center;
 
   img {
     width: 100%;
@@ -213,4 +213,43 @@ a:hover{
   opacity: var(--pah);
   pointer-events: none;
 }
+body{
+  overflow-x: hidden;
+  height: 100px;
+} 
+@media (max-width: 600px){
+  .header{
+    gap: 0px;
+  }
+  .main{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .tv{
+    width: 300px;
+  }
 
+  .tv img{
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .info {
+  position: absolute;
+  width: 390px;
+  left: 0px;
+  height: 000px;
+  background-color: rgba(0, 38, 255, 0);
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.pomehi{
+  opacity: 0;
+}
+}
