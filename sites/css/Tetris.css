@@ -31,6 +31,10 @@
     padding-bottom: 15px;
     padding-top: 15px;
     background-color: var(--bg);
+
+
+
+
     color: red  ;
     opacity: 0.5;
     transition: 0.3s;
@@ -547,66 +551,30 @@ html:has(#night:checked) {
     z-index: 999;
 }
 .p5{
-    
     grid-area: 3/2/5/4;
-    width: 95%;
-  height: 95%;
 }
-
-.p10{
-    
+.p10{   
     grid-area: 11/1/11/2;
-    border-right: none;
-    width: 98%;
 }
-
 .p11{
-    
     grid-area: 11/2/11/2;
-    border-top: none;
-    border-left: none;
-    width: 98%;
-    height: 98%;
 }
-.p12{
-    
+.p12{ 
     grid-area: 10/2/10/2;
-    border-top: none;
-    border-bottom: none;
-    height: 100%;
-
 }.p13{
-    
     grid-area: 9/2/9/2;
-    border-bottom: none;
-    height: 98%;
 }
 .p14{
-    
     grid-area: 10/4/10/4; 
-    border-bottom: none;
-    height: 95%;
 }
 .p15{
-    
     grid-area: 11/4/11/4; 
-        border-top: none;
-    border-bottom: none;
-    height: 100%;
 }
 .p16{
-    
     grid-area: 12/4/12/4; 
-        border-top: none;
-    border-bottom: none;
-    height: 100%;
 }
-
 .p17{
-    
     grid-area: 13/4/13/4; 
-    border-top: none;
-    height: 95%;
 }
 .p44{
     grid-area: 16/2/16/2; 

@@ -198,3 +198,8 @@ html:has(#night:checked) {
   align-items: center;
   gap: 250px;
 }
+@media (max-width: 600px){
+  .header{
+    flex-wrap: wrap;
+  }
+}
