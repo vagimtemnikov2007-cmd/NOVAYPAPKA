@@ -87,7 +87,7 @@ html:has(#night:checked) .btn.night {
   --gradirnt: 1;
   --col: blue;
   --eco:100%;
-  --pah: 0.3;
+  --pah: 0.0;
   --inve:0.1;
 }
 
@@ -96,7 +96,7 @@ html:has(#light:checked) {
   --gradirnt: 2;
   --col: blue;
   --eco:100%;
-  --pah: 0.3;
+  --pah: 0.0;
   --inve:0.1;
 }
 
